@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #121212;
+   color: #ffffff;
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #1c1c1c;
+   padding: 1rem 2rem;
+   flex-wrap: wrap;
+   gap: 1rem;
+   position: relative;
+}
+
+header img {
+   height: 40px;
+   width: auto;
+   cursor: pointer;
+   animation: rotateImage 3s ease-out forwards;
+}
+
+@keyframes rotateImage {
+   0% {
+      transform: rotate(0deg);
+   }
+
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+
+/* Header layout adjustments for larger screens */
+.header-left {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+   flex: 1;
+   justify-content: flex-start;
+}
+
+.header-left .header-links {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+}
+
+.header-left .header-links a {
+   color: #ffffff;
+   text-decoration: none;
+   padding: 0.5rem 1rem;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+}
+
+.header-left .header-links a:hover {
+   background-color: #7d5eff;
+}
+
+/* Input container */
+.input-container {
+   position: relative;
+   width: 100%;
+   max-width: 300px;
+   margin-left: auto;
+}
+
+.close-button {
+   display: none;
+   background-color: transparent;
+   color: #ffffff;
+   border: none;
+   font-size: 1.5rem;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+   transition: color 0.3s;
+}
+
+.close-button:hover {
+   color: #7d5eff;
+}
+
+/* Search input field */
+.header-actions input {
+   width: 100%;
+   padding: 0.5rem 1rem;
+   padding-right: 3rem;
+   border-radius: 4px;
+   border: none;
+   outline: none;
+   font-size: 1rem;
+}
+
+/* Add button inside the input field */
+.header-actions .add-button {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: #7d5eff;
+   color: #ffffff;
+   border: none;
+   padding: 0.3rem 0.7rem;
+   font-size: 0.9rem;
+   border-radius: 4px;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+
+.header-actions .add-button:hover {
+   background-color: #6247e5;
+}
+
+/* Container for stats */
+.container {
+   padding: 2rem;
+   transition: margin-top 0.3s ease;
+}
+
+.stats {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+   gap: 1.5rem;
+}
+
+.stat-box {
+   background-color: #1c1c1c;
+   border-radius: 8px;
+   padding: 1rem;
+   text-align: center;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box h2 {
+   font-size: 2rem;
+   margin-bottom: 0.5rem;
+}
+
+.stat-box p {
+   font-size: 1rem;
+   color: #b3b3b3;
+}
+
+/* Dropdown for small screens */
+.dropdown {
+   display: none;
+   position: absolute;
+   top: 100%;
+   left: 0;
+   background-color: #1c1c1c;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   width: 100%;
+   opacity: 0;
+   transform: translateY(-10px);
+   transition: opacity 0.3s ease, transform 0.3s ease;
+   z-index: 100;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding: 10px;
+}
+
+.dropdown a {
+   color: #ffffff;
+   padding: 0.8rem;
+   text-align: left;
+   text-decoration: none;
+   display: block;
+   border-radius: 4px;
+   transition: background-color 0.3s;
+}
+
+.dropdown a:hover {
+   background-color: #7d5eff;
+}
+
+/* Hamburger icon */
+.menu-button {
+   display: none;
+   background-color: transparent;
+   color: #ffffff;
+   border: none;
+   font-size: 1.5rem;
+   cursor: pointer;
+   transition: color 0.3s;
+}
+
+.menu-button:hover {
+   color: #7d5eff;
+}
+
+@media (max-width: 815px) {
+   .header-left .header-links a {
+      padding: 0.25rem 0.5rem;
+   }
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+   header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+   }
+
+   /* Adjust logo */
+   .header-left {
+      margin-bottom: 1rem;
+   }
+
+   /* Search input field */
+   .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: auto;
+   }
+
+   .header-actions input {
+      width: 200px;
+   }
+
+   /* Hamburger icon for small screens */
+   .menu-button {
+      display: block;
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+   }
+
+   .dropdown.show {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   /* Close button inside dropdown */
+   .close-button {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+   }
+
+   .header-left .header-links {
+      display: none;
+   }
+}
+
+@media (max-width: 325px) {
+   header {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem;
+   }
+
+   /* Adjust logo */
+   .header-left {
+      margin-bottom: 1rem;
+   }
+
+   /* Search input field */
+   .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: auto;
+   }
+
+   .header-actions input {
+      width: 200px;
+   }
+
+   /* Hamburger icon for small screens */
+   .menu-button {
+      display: block;
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s;
+   }
+
+   .dropdown.show {
+      display: flex;
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   /* Close button inside dropdown */
+   .close-button {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+   }
+
+   .header-left .header-links {
+      display: none;
+   }
+}
+
+@media (min-width: 768px) {
+
+   /* Show regular header links */
+   .header-left .header-links {
+      display: flex;
+      gap: 1rem;
+   }
+
+   /* Hide dropdown on large screens */
+   .dropdown {
+      display: none;
+   }
+
+   /* Hide hamburger icon */
+   .menu-button {
+      display: none;
+   }
+}

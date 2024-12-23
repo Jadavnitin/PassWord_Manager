@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Password Manager Dashboard</title>
+   <!-- Font Awesome CDN for icons -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   <!-- Link to external CSS -->
+   <link rel="stylesheet" href="css/main.css">
+   <script src="js/main.js" defer></script>
+</head>
+
+<body>
+   <header>
+      <div class="header-left">
+         <img src="images/logo.webp" alt="Logo" id="rotateImage">
+         <!-- Header links are shown inline on larger screens, hidden on smaller screens -->
+         <div class="header-links">
+            <a href="#">Passwords</a>
+            <a href="#">Import</a>
+            <a href="#">Settings</a>
+            <a href="/signout">Sign Out</a>
+         </div>
+      </div>
+      <div class="header-actions">
+         <!-- Input container for search field and add button -->
+         <div class="input-container">
+            <input type="text" placeholder="Search">
+            <button class="add-button">Add</button>
+         </div>
+      </div>
+
+      <!-- Hamburger icon for small screens -->
+      <button class="menu-button" id="menuButton">
+         <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Dropdown menu for small screens -->
+      <div class="dropdown" id="dropdownMenu">
+         <button class="close-button" id="closeButton">
+            <i class="fas fa-times"></i>
+         </button>
+         <a href="#">Passwords</a>
+         <a href="#">Import</a>
+         <a href="#">Settings</a>
+         <a href="/signout" target="_blank">Sign Out</a>
+      </div>
+   </header>
+
+   <div class="container" id="statsContainer">
+      <div class="stats">
+         <div class="stat-box">
+            <h2>0 / 100</h2>
+            <p>Total Passwords</p>
+         </div>
+         <div class="stat-box">
+            <h2>0 ms</h2>
+            <p>Decryption Time</p>
+         </div>
+         <div class="stat-box">
+            <h2>8.1.1</h2>
+            <p>Client Version</p>
+         </div>
+      </div>
+   </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+/* Basic Reset */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Roboto', sans-serif;
+}
+
+body {
+   background-color: #1e1e2f;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   color: #fff;
+}
+
+.login-container {
+   background-color: #29293d;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+   width: 100%;
+   max-width: 400px;
+}
+
+.logo {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 20px;
+}
+
+.logo img {
+   width: 50px;
+   height: 50px;
+}
+
+.form-group {
+   margin-bottom: 20px;
+   position: relative;
+   display: flex;
+   align-items: center;
+}
+
+.form-group i {
+   color: #ccc;
+   font-size: 20px;
+   margin-right: 10px;
+}
+
+.form-group input,
+.form-group select {
+   width: 100%;
+   padding: 12px 15px;
+   border-radius: 5px;
+   border: 1px solid #444;
+   background-color: #1e1e2f;
+   color: #fff;
+   font-size: 16px;
+   transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+   outline: none;
+   box-shadow: 0 0 8px #6a5acd;
+   border-color: #6a5acd;
+}
+
+.toggle-btn {
+   position: absolute;
+   top: 50%;
+   right: 10px;
+   transform: translateY(-50%);
+   font-size: 25px;
+   cursor: pointer;
+   transition: color 0.4s;
+}
+
+.toggle-btn.on {
+   color: white;
+}
+
+.toggle-btn.off {
+   color: red;
+}
+
+.btn {
+   display: block;
+   width: 100%;
+   padding: 12px;
+   background-color: #6a5acd;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   font-size: 16px;
+   cursor: pointer;
+   margin-top: 20px;
+   text-align: center;
+   transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+   background-color: #5a4dbb;
+}
+
+.link {
+   text-align: center;
+   margin-top: 10px;
+}
+
+.link a {
+   color: #6a5acd;
+   text-decoration: none;
+}
+
+.link a:hover {
+   text-decoration: underline;
+}
+
+/* Hide dropdown icon in select */
+select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+   background-image: none;
+   padding-right: 0;
+}
+
+.slider-slash-container {
+   position: relative;
+   display: inline-block;
+   font-size: 17px;
+}
+
+.fa-slash {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   color: gray;
+   font-size: 20px;
+}
+
+.fa-sliders {
+   color: gray;
+}
+
+
+
+.checkbox {
+   display: flex;
+   align-items: center;
+   justify-content: start;
+   gap: 0.5rem;
+}
+
+.checkbox input {
+   width: 1rem;
+   height: 1rem;
+   accent-color: #4f46e5;
+}
+
+.checkbox a {
+   color: #4f46e5;
+   text-decoration: none;
+}
+
+.checkbox a:hover {
+   text-decoration: underline;
+}
+
+
+
+button.btn:hover {
+   background-color: #4338ca;
+}
+
+button.btn:last-of-type {
+   background-color: #444;
+}
+
+button.btn:last-of-type:hover {
+   background-color: #555;
+}
+
+

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Home Page</title>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="css/home.css">
+   <script src="js/home.js" defer></script>
+</head>
+
+<body>
+  {{>navbar}}
+   <!-- Hero Section -->
+   <section class="hero">
+      <div class="hero-content">
+         <h1><span class="highlight">The most unbloated</span> password manager</h1>
+         <p>Passky is a simple, modern, lightweight, open-source and secure password manager.</p>
+      </div>
+      <div class="hero-image">
+         <img src="images/passky-design home.webp" alt="Passky Design">
+      </div>
+   </section>
+
+
+
+
+   <!-- Centered Heading -->
+   <header class="features-heading">
+      <h1>Features</h1>
+   </header>
+
+   <!-- Features Section -->
+   <section class="features-section">
+      <div class="container">
+         <!-- Left Content -->
+         <div class="features-content">
+            <div class="icon">
+               <i class="fa-regular fa-smile"></i>
+            </div>
+            <h2>Ease of use</h2>
+            <p>
+               Our main goal for Passky is to be the easiest password manager to use.
+               On Passky's main page, you can see all your saved passwords, search for specific ones,
+               edit them, and copy information with just one click.
+            </p>
+            <a href="/download" class="btn">Get started</a>
+         </div>
+         <!-- Right Content: Video -->
+         <div class="features-video">
+            <video autoplay muted loop>
+               <source src="videos/passky-addPassword.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+         </div>
+      </div>
+   </section>
+
+
+
+
+
+   <!-- 2fa-----Container -->
+   <section class="feature-section">
+      <!-- Left: Video -->
+      <div class="video-container">
+         <video autoplay loop muted>
+            <source src="videos/passky-hardware2fa (1).mp4" type="video/mp4">
+            Your browser does not support the video tag.
+         </video>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="feature-content">
+         <div class="feature-icon">2FA</div>
+         <h2>Software & Hardware 2FA</h2>
+         <p>
+            Unlike some other password managers, we do care about security. That's why users can use both,
+            Software and Hardware two-factor authentication for completely free.
+         </p>
+         <a href="/download" class="btn get-started">Get started</a>
+      </div>
+   </section>
+
+
+
+
+   <!-- import export sections -->
+   <section class="features-section import-export-section">
+      <div class="container">
+         <!-- Left Content -->
+         <div class="features-content import-export-content">
+            <div class="icon import-export-icon">
+               <img src="images/icon.svg" alt="Import Export Icon">
+            </div>
+            <h2 class="import-export-heading">Import & Export</h2>
+            <p class="import-export-text">
+               Passky allows you to import passwords from all other major password managers in just a couple of seconds.
+               Not only that, but Passky can also export your passwords to different password managers, so you can
+               switch
+               from Passky to any other password manager without any problems.
+            </p>
+            <a href="/download" class="btn import-export-btn">Get started</a>
+         </div>
+         <!-- Right Content: Video -->
+         <div class="features-video import-export-video">
+            <video autoplay muted loop>
+               <source src="videos/passky-import.mp4" type="video/mp4">
+               Your browser does not support the video tag.
+            </video>
+         </div>
+      </div>
+   </section>
+
+
+
+   <!-- multiple language select sections -->
+   <section class="multiple-lang-section">
+      <!-- Left: Video -->
+      <div class="multiple-lang-img-container">
+         <img src="images/passky-languages.webp" alt="language selections">
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="multiple-lang-content">
+         <div class="multiple-lang-icon">
+            <i class="fa-solid fa-globe"></i> <!-- Replace with your icon -->
+         </div>
+         <h2>Multiple languages</h2>
+         <p>
+            With help from our users, Passky now supports 25 languages! If your language is missing and you want to
+            contribute to this project, you can easily translate it on <a href="#"
+               class="multiple-lang-link">Crowdin</a>.
+         </p>
+         <a href="/download" class="btn multiple-lang-get-started">Get started</a>
+      </div>
+   </section>
+
+
+
+   <!-- themes sections -->
+   <section class="themes-section">
+      <div class="content">
+         <div class="icon">
+            <i class="fa-solid fa-paintbrush"></i>
+         </div>
+         <h1>Multiple themes</h1>
+         <p>Customize the look and feel to your desires! Select from countless pre-built themes or make your own one in
+            less than five minutes.</p>
+         <a href="/download" class="get-started-btn">Get started</a>
+      </div>
+      <div class="preview-image">
+         <img src="images/passky-themes.webp" alt="Theme Preview">
+      </div>
+   </section>
+
+
+{{>footer}}
+
+
+
+
+</body>
+
+</html>
