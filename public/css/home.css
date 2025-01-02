@@ -740,7 +740,7 @@ p a {
    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
 
-img {
+.multiple-lang-img-container img {
    width: 100%;
    height: auto;
    display: block;
@@ -913,7 +913,6 @@ footer {
    background-color: #141820;
    padding: 20px;
    text-align: center;
-   margin-top: 50px;
 }
 
 .footer-links a,

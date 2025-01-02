@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Settings Page</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/settings.css">
+   <script src="js/settings.js" defer></script>
+</head>
+<body>
+   <header class="main-header-ap">
+      <div class="header-left">
+         <img src="images/logo.webp" alt="Logo">
+         <!-- Header links are shown inline on larger screens, hidden on smaller screens -->
+         <div class="header-links">
+            <a href="main" class="active" target="_blank">Passwords</a>
+            <a href="import" target="_blank">Import & Export</a>
+            <a href="settings" target="_blank">Settings</a>
+            <a href="/signout">Sign Out</a>
+         </div>
+      </div>
+   
+      <!-- Hamburger icon for small screens -->
+      <button class="menu-button" id="menuButton">
+         <i class="fas fa-bars"></i>
+      </button>
+   
+      <!-- Dropdown menu for small screens -->
+      <div class="dropdown" id="dropdownMenu">
+         <button class="close-button" id="closeButton">
+            <i class="fas fa-times"></i>
+         </button>
+         <a href="main" class="active" target="_blank">Passwords</a>
+         <a href="import" target="_blank">Import & Export</a>
+         <a href="settings" target="_blank">Settings</a>
+         <a href="/signout">Sign Out</a>
+      </div>
+   </header>
+   
+   <div class="settings-wrapper">
+      <div class="settings-card-container">
+         <div class="settings-card">
+            <h3>Language</h3>
+            <select class="settings-dropdown">
+               <option value="English">English</option>
+               <option value="Spanish">Spanish</option>
+               <option value="French">French</option>
+            </select>
+         </div>
+   
+         <div class="settings-card">
+            <h3>Theme</h3>
+            <select class="settings-dropdown" id="theme-selector">
+               <option value="Dark">Dark</option>
+               <option value="Solarised Dark">Solarised Dark</option>
+               <option value="Tokyo Night">Tokyo Night</option>
+               <option value="Dracula">Dracula</option>
+               <option value="Monokai">Monokai</option>
+               <option value="Blue">Blue</option>
+               <option value="Nord">Nord</option>
+               <option value="Gray">Gray</option>
+               <option value="Light">Light</option>
+            </select>
+         </div>
+   
+         <div class="settings-card">
+            <h3>Session Duration</h3>
+            <select class="settings-dropdown">
+               <option value="5 minutes">5 minutes</option>
+               <option value="10 minutes">10 minutes</option>
+               <option value="15 minutes">15 minutes</option>
+               <option value="20 minutes">20 minutes</option>
+               <option value="30 minutes">30 minutes</option>
+               <option value="60 minutes">60 minutes</option>
+            </select>
+         </div>
+   
+         <div class="settings-card">
+            <h3>Website Icons</h3>
+            <button class="settings-button">Disable</button>
+            <p class="settings-info">Enabling website icons might reduce your privacy.</p>
+         </div>
+   
+         <div class="settings-card">
+            <h3>Auto Search</h3>
+            <button class="settings-button">Disable</button>
+            <p class="settings-info">Only available in the browser extension.</p>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

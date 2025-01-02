@@ -1,0 +1,97 @@
+ :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --input-border: #444;
+    --settings-card-color: #252525;
+
+ }
+
+
+
+ #import-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 4fr));
+    row-gap: 1.5rem;
+    column-gap: 2rem;
+    padding-inline: 20px;
+    padding-block: 50px;
+ }
+
+ .i-e-card {
+    background-color: var(--settings-card-color);
+    border-radius: 8px;
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+ }
+
+ .i-e-card:hover {
+    transform: scale(1.05);
+ }
+
+ .i-e-card img {
+    max-width: 110px;
+    margin-bottom: 15px;
+ }
+
+ .i-e-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+ }
+
+ .i-e-buttons {
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .i-e-buttons button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.2s;
+ }
+
+ .i-e-buttons button:hover {
+    color: #d40000;
+ }
+
+ .i-e-buttons button i {
+    margin-right: 10px;
+
+ }
+
+ @media (max-width: 992px) {
+    #import-card-container {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 1.5rem;
+    }
+ }
+
+ @media (max-width: 600px) {
+    #import-card-container {
+       grid-template-columns: 1fr;
+    }
+
+ }
+
+ @media (max-width: 325px) {
+
+    #import-card-container {
+       grid-template-columns: 1fr;
+
+
+    }
+
+    .i-e-card img {
+       max-width: 70px;
+       margin-bottom: 15px;
+    }
+
+    .i-e-card h3 {
+       font-size: 1rem;
+       margin-bottom: 15px;
+    }
+ }

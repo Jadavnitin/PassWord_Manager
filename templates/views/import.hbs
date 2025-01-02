@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Import Export Page</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/import.css">
+   <script src="js/main.js" defer></script>
+   <script src="js/import.js" defer></script>
+
+</head>
+
+<body>
+   <header class="main-header-ap">
+      <div class="header-left">
+         <img src="images/logo.webp" alt="Logo">
+         <!-- Header links are shown inline on larger screens, hidden on smaller screens -->
+         <div class="header-links">
+            <a href="main" class="active" target="_blank">Passwords</a>
+            <a href="import" target="_blank">Import & Export</a>
+            <a href="settings" target="_blank">Settings</a>
+            <a href="/signout">Sign Out</a>
+         </div>
+      </div>
+
+      <!-- Hamburger icon for small screens -->
+      <button class="menu-button" id="menuButton">
+         <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Dropdown menu for small screens -->
+      <div class="dropdown" id="dropdownMenu">
+         <button class="close-button" id="closeButton">
+            <i class="fas fa-times"></i>
+         </button>
+         <a href="main" class="active" target="_blank">Passwords</a>
+         <a href="import" target="_blank">Import & Export</a>
+         <a href="settings" target="_blank">Settings</a>
+         <a href="/signout">Sign Out</a>
+      </div>
+   </header>
+
+
+   <div id="import-card-container">
+
+      <!-- 1Password -->
+      <div class="i-e-card">
+         <img src="images/logo.webp" alt="" style="background-color: white; border-radius: 100%;">
+         <h3>Passky</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-cloud-upload-alt"></i> Backup</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+
+
+      <!-- Bitwarden -->
+      <div class="i-e-card">
+         <img src="images/bitwarden.png" alt="">
+         <h3>Bitwarden</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+         </div>
+      </div>
+
+
+      <!-- KeePassXC -->
+      <div class="i-e-card">
+         <img src="images/keepassxc.svg" alt="">
+         <h3>KeePassXC</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+
+
+      <!-- NordPass -->
+      <div class="i-e-card">
+         <img src="images/nordpass.png" alt="">
+         <h3>NordPass</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+
+      <!-- Passky -->
+      <div class="i-e-card">
+         <img src="images/1password.svg" alt="">
+         <h3>1Password</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+         </div>
+      </div>
+
+
+      <!-- Keeper -->
+      <div class="i-e-card">
+         <img src="images/keeper.png" alt="">
+         <h3>Keeper</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+
+      <!-- LastPass -->
+      <div class="i-e-card">
+         <img src="images/lastpass.png" alt="">
+         <h3>LastPass</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+
+      <!-- Dashlane -->
+      <div class="i-e-card">
+         <img src="images/dashlane.png" alt="">
+         <h3>Dashlane</h3>
+         <div class="i-e-buttons">
+            <button><i class="fas fa-file-import"></i> Import</button>
+            <button><i class="fas fa-file-export"></i> Export</button>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>

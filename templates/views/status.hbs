@@ -6,10 +6,51 @@
    <title>Status Page</title>
    <link rel="stylesheet" href="css/home.css">
    <script src="js/navbar.js" defer></script>
+   <link rel="stylesheet" href="css/status.css">
+   
 </head>
 <body>
    <div id="navbar"></div>
-   <h1>Status Page</h1>
+   <div class="custom-container">
+      <div class="custom-status-header">
+         <div class="custom-icon">&#10004;</div>
+         <h1>All Systems Operational</h1>
+         <p>All systems operating as expected—please report any issues to the support team.</p>
+      </div>
+   
+      <div class="custom-status-table">
+         <table>
+            <thead>
+               <tr>
+                  <th>Service</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>Production (<a href="https://app.teampassword.com" style="color: #00ffcc;">app.teampassword.com</a>)
+                  </td>
+                  <td>
+                     <div class="custom-status">
+                        <span class="custom-dot green"></span>
+                        Operational
+                     </div>
+                  </td>
+               </tr>
+               <tr>
+                  <td>Marketing Site (<a href="https://teampassword.com" style="color: #00ffcc;">teampassword.com</a>)
+                  </td>
+                  <td>
+                     <div class="custom-status">
+                        <span class="custom-dot green"></span>
+                        Operational
+                     </div>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
    <div id="footer"> </div>
 </body>
 </html>

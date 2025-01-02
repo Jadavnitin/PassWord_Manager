@@ -60,6 +60,12 @@ app.get("/servers", (req, res) => {
 app.get("/main", (req, res) => {
    res.render("main");
 })
+app.get("/import", (req, res) => {
+   res.render("import");
+})
+app.get("/settings", (req, res) => {
+   res.render("settings");
+})
 
 
 app.get("/signup", (req, res) => {

@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.contact-faq-container {
+   margin-inline: 2rem;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 4rem 2rem;
+}
+
+.faq-container {
+   max-width: 1200px;
+   width: 100%;
+}
+
+.faq-container h1 {
+   text-align: left;
+   font-size: 3.8rem;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+.faq-item {
+   background-color: #2e2e44;
+   margin-bottom: 10px;
+   border-radius: 5px;
+   padding: 15px;
+   transition: background-color 0.3s;
+}
+
+.faq-item:hover {
+   background-color: #3c3c5c;
+}
+
+.faq-question {
+   font-size: 1.1rem;
+   font-weight: bold;
+   cursor: pointer;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.faq-answer {
+   font-size: 1rem;
+   margin-top: 10px;
+   display: none;
+}
+
+.faq-item.open .faq-answer {
+   display: block;
+}
+
+.faq-item.open .faq-question i {
+   transform: rotate(180deg);
+   transition: transform 0.3s;
+}
+
+.contact-section {
+   max-width: 1200px;
+   width: 100%;
+   padding: 0 1rem;
+   display: grid;
+   grid-template-rows: auto auto 1fr;
+   row-gap: 2rem;
+   flex-grow: 1;
+}
+
+.contact-section h1 {
+   text-align: left;
+   font-size: 3.8rem;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+.contact-section p {
+   font-size: 1.2rem;
+   margin-bottom: 20px;
+   color: #cbd5e1;
+}
+
+.contact-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   gap: 2.5rem;
+}
+
+.contact-card {
+   position: relative;
+   background-color: #1e293b;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   text-align: left;
+   display: flex;
+   flex-direction: column;
+   padding: 2rem;
+}
+
+.content-icon-wrapper {
+   position: absolute;
+   top: -25px;
+   left: 20%;
+   transform: translateX(-50%);
+   background-color: #4f46e5;
+   border-radius: 0.75rem;
+   width: 64px;
+   height: 64px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.content-icon-wrapper i {
+   color: white;
+   font-size: 24px;
+}
+
+.contact-card h2 {
+   font-size: 1.5rem;
+   margin: 2.5rem 0 10px;
+}
+
+.contact-card p {
+   font-size: 1rem;
+   margin-bottom: 20px;
+   color: #94a3b8;
+}
+
+.contact-card a {
+   color: #6366f1;
+   text-decoration: none;
+   font-size: 1rem;
+   font-weight: bold;
+   margin-top: auto;
+   display: inline-block;
+   text-align: left;
+   padding-inline: 2rem;
+}
+
+.contact-card a:hover {
+   text-decoration: underline;
+}
+
+.contact-adresses {
+   padding: 3rem 2rem;
+   text-align: left;
+}
+
+.contact-main-headings {
+   padding: 4rem 0rem;
+   text-align: left;
+}
+
+@media (max-width: 1024px) {
+   .contact-faq-container {
+      margin-inline: 2rem;
+      padding: 3rem 1rem;
+   }
+
+   .contact-section h1 {
+      font-size: 3.5rem;
+   }
+
+   .contact-section p {
+      font-size: 1.1rem;
+   }
+
+   .contact-main-headings {
+      padding: 3.5rem 0rem;
+   }
+}
+
+@media (max-width: 768px) {
+   .contact-section h1 {
+      font-size: 2.5rem;
+   }
+
+   .contact-main-headings {
+      padding: 3rem 0rem;
+   }
+}
+
+@media (max-width: 576px) {
+   .contact-section h1 {
+      font-size: 2rem;
+   }
+
+   .contact-section p {
+      font-size: 1rem;
+   }
+
+   .contact-card h2 {
+      font-size: 1.2rem;
+   }
+
+   .contact-card p {
+      font-size: 0.9rem;
+   }
+}
+
+@media (max-width: 319px) {
+   .contact-faq-container {
+      padding: 1rem;
+   }
+
+   .contact-section h1 {
+      font-size: 1.8rem;
+   }
+
+   .contact-section p {
+      font-size: 0.9rem;
+   }
+
+   .contact-card {
+      padding: 1.5rem;
+      width: 100%;
+   }
+
+   .contact-card h2 {
+      font-size: 1.1rem;
+   }
+
+   .contact-card p {
+      font-size: 0.8rem;
+   }
+
+   .contact-card a {
+      font-size: 0.9rem;
+      padding-inline: 1rem;
+   }
+}

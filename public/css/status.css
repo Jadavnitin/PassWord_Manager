@@ -1,0 +1,154 @@
+.custom-container {
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px;
+   color: #fff;
+}
+
+.custom-status-header {
+   background-color: #333;
+   padding: 40px 20px;
+   border-radius: 8px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+.custom-status-header .custom-icon {
+   font-size: 50px;
+   color: #00ffcc;
+   margin-bottom: 10px;
+}
+
+.custom-status-header h1 {
+   font-size: 24px;
+   color: #fff;
+}
+
+.custom-status-header p {
+   color: #ccc;
+   margin-top: 10px;
+}
+
+.custom-status-table {
+   background: #222;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+   overflow: hidden;
+   width: 100%;
+}
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+}
+
+table thead {
+   background-color: #444;
+}
+
+table th,
+table td {
+   padding: 15px;
+   text-align: left;
+   font-size: 14px;
+}
+
+table th {
+   color: #bbb;
+   text-transform: uppercase;
+   font-weight: 600;
+}
+
+table td {
+   border-top: 1px solid #555;
+   color: #eee;
+}
+
+.custom-status {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.custom-status .custom-dot {
+   height: 12px;
+   width: 12px;
+   border-radius: 50%;
+   margin-right: 8px;
+}
+
+.custom-status .custom-dot.green {
+   background-color: #28a745;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+   .custom-container {
+      padding: 20px;
+   }
+
+   .custom-status-header h1 {
+      font-size: 22px;
+   }
+}
+
+@media (max-width: 900px) {
+   .custom-status-header {
+      padding: 30px 15px;
+   }
+
+   table th,
+   table td {
+      padding: 12px;
+   }
+
+   .custom-status-header h1 {
+      font-size: 20px;
+   }
+}
+
+@media (max-width: 600px) {
+   .custom-container {
+      padding: 15px;
+   }
+
+   .custom-status-header {
+      padding: 20px 10px;
+   }
+
+   .custom-status-header h1 {
+      font-size: 18px;
+   }
+
+   table th,
+   table td {
+      padding: 10px;
+      font-size: 12px;
+   }
+
+   .custom-status .custom-dot {
+      height: 10px;
+      width: 10px;
+   }
+}
+
+@media (max-width: 400px) {
+   .custom-status-header {
+      padding: 15px 5px;
+   }
+
+   table th,
+   table td {
+      padding: 8px;
+      font-size: 10px;
+   }
+
+   .custom-status .custom-dot {
+      height: 8px;
+      width: 8px;
+   }
+}

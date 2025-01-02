@@ -8,19 +8,20 @@
    <!-- Font Awesome CDN for icons -->
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
    <!-- Link to external CSS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1-crypto-js.min.js"></script>
    <link rel="stylesheet" href="css/main.css">
    <script src="js/main.js" defer></script>
 </head>
 
 <body>
-   <header>
+   <header class="main-header-ap">
       <div class="header-left">
-         <img src="images/logo.webp" alt="Logo" id="rotateImage">
+         <img src="images/logo.webp" alt="Logo">
          <!-- Header links are shown inline on larger screens, hidden on smaller screens -->
          <div class="header-links">
-            <a href="#">Passwords</a>
-            <a href="#">Import</a>
-            <a href="#">Settings</a>
+            <a href="main" class="active" target="_blank">Passwords</a>
+            <a href="import" target="_blank">Import & Export</a>
+            <a href="settings" target="_blank">Settings</a>
             <a href="/signout">Sign Out</a>
          </div>
       </div>
@@ -28,7 +29,7 @@
          <!-- Input container for search field and add button -->
          <div class="input-container">
             <input type="text" placeholder="Search">
-            <button class="add-button">Add</button>
+            <button class="add-button" id="addButton">Add</button>
          </div>
       </div>
 
@@ -42,13 +43,14 @@
          <button class="close-button" id="closeButton">
             <i class="fas fa-times"></i>
          </button>
-         <a href="#">Passwords</a>
-         <a href="#">Import</a>
-         <a href="#">Settings</a>
-         <a href="/signout" target="_blank">Sign Out</a>
+         <a href="main" class="active" target="_blank">Passwords</a>
+         <a href="import" target="_blank">Import & Export</a>
+         <a href="settings" target="_blank">Settings</a>
+         <a href="/signout">Sign Out</a>
       </div>
    </header>
 
+   <!-- Stats container -->
    <div class="container" id="statsContainer">
       <div class="stats">
          <div class="stat-box">
@@ -56,7 +58,7 @@
             <p>Total Passwords</p>
          </div>
          <div class="stat-box">
-            <h2>0 ms</h2>
+            <h2 class="ms-h2">0 ms</h2>
             <p>Decryption Time</p>
          </div>
          <div class="stat-box">
@@ -66,6 +68,78 @@
       </div>
    </div>
 
+
+   <div id="todo-list-section" class="container">
+      <div id="todo-list"></div>
+   </div>
+
+
+   <div id="toast" class="toast"></div>
+
+   <!-- Add Password Section (Initially hidden) -->
+   <div class="apcontainer" id="add-password-section" style="display: none;">
+      <div class="apheader">
+         <h1>Add Password</h1>
+      </div>
+      <form>
+         <div class="apform-group">
+            <i class="fas fa-globe"></i>
+            <input type="text" id="website" placeholder="e.g., example.com">
+         </div>
+         <div class="apform-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="e.g., johndoe">
+         </div>
+         <div class="apform-group">
+            <i class="fas fa-lock"></i>
+            <div class="input-with-button">
+               <input type="password" id="password" placeholder="********">
+               <button type="button" id="showPasswordButton">Show</button>
+            </div>
+         </div>
+         <div class="apform-group">
+            <textarea id="note" placeholder="Add a note..."></textarea>
+         </div>
+         <div class="buttons">
+            <button type="button" class="add" id="ap-add-button">Add</button>
+            <button type="button" id="cancel-gen" class="cancel">Cancel</button>
+         </div>
+      </form>
+   </div>
+
+
+
+   <!-- Password Generator Section (Initially Hidden) -->
+   <div class="apcontainer" id="password-generator-section" style="display: none;">
+      <div class="apheader">Generate Password</div>
+      <div class="password-generator">
+         <div class="password-output">
+            <i class="fas fa-key key-icon"></i>
+            <input type="password" id="password-gen" readonly>
+            <i class="fas fa-eye toggle-visibility" id="toggleVisibility"></i>
+         </div>
+         <div class="controls">
+            <label for="length">Total Length <span id="lengthValue">20</span></label>
+            <input type="range" id="length-slider" min="8" max="50" value="20">
+            <div class="switch">
+               <label for="azSwitch">A-Z</label>
+               <input type="checkbox" id="azSwitch" checked>
+            </div>
+            <div class="switch">
+               <label for="digitsSwitch">Digits</label>
+               <input type="checkbox" id="digitsSwitch" checked>
+            </div>
+            <div class="switch">
+               <label for="symbolsSwitch">Symbols</label>
+               <input type="checkbox" id="symbolsSwitch" checked>
+            </div>
+         </div>
+         <div class="buttons">
+            <button type="button" id="use">Use Password</button>
+            <button type="button" id="cancel-gen1" class="cancel">Cancel</button>
+         </div>
+      </div>
+   </div>
 
 </body>
 

@@ -1,17 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Contact Page</title>
    <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/contact.css">
    <script src="js/navbar.js" defer></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <script src="js/contact.js" defer></script>
 </head>
+
 <body>
    <div id="navbar">
    </div>
-   <h1>Contact Page</h1>
+   
+ 
+      <div class="contact-faq-container">
+         <div class="faq-container">
+            <h1>FAQ</h1>
+            <div class="faq-item">
+               <div class="faq-question">I have forgotten my username. Where can I find it? <i
+                     class="fas fa-chevron-down"></i></div>
+               <div class="faq-answer">Under 'Sign up' button in Passky Client you will find a button called 'Forgot
+                  username?'. If you click this button, a dialog will open and request Passky server and your email. If you
+                  have entered the information correctly and clicked on the button 'Send', you will receive an email with
+                  all usernames connected with your email.</div>
+            </div>
+            <div class="faq-item">
+               <div class="faq-question">I have forgotten my master password. Where can I find it? <i
+                     class="fas fa-chevron-down"></i></div>
+               <div class="faq-answer">The master password is used to encrypt and decrypt your passwords and messages.
+                  Master password never leaves your computer, so if you have forgotten it your data can't be recovered.
+               </div>
+            </div>
+            <div class="faq-item">
+               <div class="faq-question">What encryptions does Passky use? <i class="fas fa-chevron-down"></i></div>
+               <div class="faq-answer">Passky uses XChaCha20 for password encryption and Argon2id for password hashing
+                  (Salt included).</div>
+            </div>
+            <div class="faq-item">
+               <div class="faq-question">What happens when my Premium account expires? <i class="fas fa-chevron-down"></i>
+               </div>
+               <div class="faq-answer">You will still be able to view, edit and delete passwords, but you won't be able to
+                  add any new password if you have reached the password limit.</div>
+            </div>
+            <div class="faq-item">
+               <div class="faq-question">Why do you define Passky as lightweight? <i class="fas fa-chevron-down"></i></div>
+               <div class="faq-answer">Passky Server is written with less than 3000 lines of code, while other password
+                  managers are usually written with more than 400,000 lines of code. This also makes Passky more
+                  maintainable and much harder for bugs and vulnerabilities to squeeze in.</div>
+            </div>
+         </div>
+      
+         <section class="contact-section">
+            <div class="contact-main-headings">
+               <h1>Contact</h1>
+               <p>No matter what type of communication you want, we have your back.</p>
+            </div>
+            <div class="contact-container">
+               <div class="contact-card">
+                  <div class="content-icon-wrapper">
+                     <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-adresses">
+                     <h2>Email</h2>
+                     <p>A place to communicate with us privately.<br>Email: info@passky.org</p>
+                  </div>
+                  <a href="mailto:info@passky.org">Contact us →</a>
+               </div>
+               <div class="contact-card">
+                  <div class="content-icon-wrapper">
+                     <i class="fas fa-gamepad"></i>
+                  </div>
+                  <div class="contact-adresses">
+                     <h2>Discord Server</h2>
+                     <p>A place that makes it easy to talk every day and hang out more often.</p>
+                  </div>
+                  <a href="#">Join now →</a>
+               </div>
+               <div class="contact-card">
+                  <div class="content-icon-wrapper">
+                     <i class="fab fa-twitter"></i>
+                  </div>
+                  <div class="contact-adresses">
+                     <h2>Twitter</h2>
+                     <p>A place to follow our progress and innovations.</p>
+                  </div>
+                  <a href="#">Follow us →</a>
+               </div>
+            </div>
+         </section>
+      </div>
+   
    <div id="footer">
    </div>
 </body>
+
 </html>

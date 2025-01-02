@@ -1,0 +1,90 @@
+:root {
+   --bg-color: #1a1a1a;
+   --settings-card-color: #252525;
+   --text-color: #ffffff;
+   --button-disable-bg: #d32f2f;
+   --button-disable-color: #ffffff;
+   --button-enable-bg: #388e3c;
+   --button-enable-color: #ffffff;
+   --input-border: #444;
+}
+
+.settings-wrapper {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background-color: var(--bg-color);
+   color: var(--text-color);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.settings-card-container {
+   width: 100%;
+   max-width: 1200px;
+}
+
+.settings-card {
+   background-color: var(--settings-card-color);
+   padding: 20px;
+   margin: 10px 0;
+   border-radius: 8px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.settings-card h3 {
+   margin: 0 0 10px;
+   font-size: 18px;
+}
+
+.settings-dropdown {
+   width: 100%;
+   padding: 10px;
+   background-color: var(--bg-color);
+   border: 1px solid var(--input-border);
+   color: var(--text-color);
+   border-radius: 4px;
+}
+
+.settings-button {
+   display: inline-block;
+   padding: 10px 20px;
+   border: none;
+   border-radius: 4px;
+   text-align: center;
+   cursor: pointer;
+   color: var(--button-disable-color);
+   background-color: var(--button-disable-bg);
+}
+
+.settings-button.enabled {
+   background-color: var(--button-enable-bg);
+   color: var(--button-enable-color);
+}
+
+.settings-info {
+   font-size: 14px;
+   color: #888;
+   margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+   .settings-card-container {
+      width: 95%;
+   }
+
+   .settings-card h3 {
+      font-size: 16px;
+   }
+}
+
+@media (max-width: 480px) {
+   .settings-card {
+      padding: 15px;
+   }
+
+   .settings-button {
+      padding: 8px 16px;
+   }
+}

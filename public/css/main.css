@@ -1,4 +1,13 @@
-/* General Reset */
+
+:root {
+   --bg-color: #1a1a1a;
+   --text-color: #ffffff;
+   --input-border: #444;
+   --settings-card-color: #252525;
+
+}
+
+
 * {
    margin: 0;
    padding: 0;
@@ -7,8 +16,8 @@
 
 body {
    font-family: Arial, sans-serif;
-   background-color: #121212;
-   color: #ffffff;
+   background-color:var(--bg-color);
+   color: var(--text-color);
    margin: 0;
    padding: 0;
 }
@@ -17,7 +26,7 @@ header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #1c1c1c;
+   background-color: var(--bg-color);
    padding: 1rem 2rem;
    flex-wrap: wrap;
    gap: 1rem;
@@ -27,20 +36,7 @@ header {
 header img {
    height: 40px;
    width: auto;
-   cursor: pointer;
-   animation: rotateImage 3s ease-out forwards;
 }
-
-@keyframes rotateImage {
-   0% {
-      transform: rotate(0deg);
-   }
-
-   100% {
-      transform: rotate(360deg);
-   }
-}
-
 
 /* Header layout adjustments for larger screens */
 .header-left {
@@ -58,14 +54,18 @@ header img {
 }
 
 .header-left .header-links a {
-   color: #ffffff;
+   color: var(--text-color);
    text-decoration: none;
    padding: 0.5rem 1rem;
    border-radius: 4px;
-   transition: background-color 0.3s;
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .header-left .header-links a:hover {
+   background-color: #7d5eff;
+}
+
+.header-links a.active {
    background-color: #7d5eff;
 }
 
@@ -75,12 +75,14 @@ header img {
    width: 100%;
    max-width: 300px;
    margin-left: auto;
+ 
+  
 }
 
 .close-button {
    display: none;
    background-color: transparent;
-   color: #ffffff;
+   color:var(--bg-color);
    border: none;
    font-size: 1.5rem;
    position: absolute;
@@ -91,7 +93,7 @@ header img {
 }
 
 .close-button:hover {
-   color: #7d5eff;
+   color:var(--text-color);
 }
 
 /* Search input field */
@@ -103,6 +105,8 @@ header img {
    border: none;
    outline: none;
    font-size: 1rem;
+   color: var(--bg-color);
+   background-color: var(--text-color);
 }
 
 /* Add button inside the input field */
@@ -112,7 +116,7 @@ header img {
    top: 50%;
    transform: translateY(-50%);
    background-color: #7d5eff;
-   color: #ffffff;
+   color: var(--bg-color);
    border: none;
    padding: 0.3rem 0.7rem;
    font-size: 0.9rem;
@@ -138,7 +142,7 @@ header img {
 }
 
 .stat-box {
-   background-color: #1c1c1c;
+   background-color: var(--settings-card-color);
    border-radius: 8px;
    padding: 1rem;
    text-align: center;
@@ -152,7 +156,7 @@ header img {
 
 .stat-box p {
    font-size: 1rem;
-   color: #b3b3b3;
+   color: var(--text-color);
 }
 
 /* Dropdown for small screens */
@@ -161,7 +165,7 @@ header img {
    position: absolute;
    top: 100%;
    left: 0;
-   background-color: #1c1c1c;
+   background-color: var(--bg-color);
    border-radius: 8px;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
    width: 100%;
@@ -176,24 +180,30 @@ header img {
 }
 
 .dropdown a {
-   color: #ffffff;
+   color:var(--text-color);
    padding: 0.8rem;
    text-align: left;
    text-decoration: none;
    display: block;
    border-radius: 4px;
-   transition: background-color 0.3s;
+   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dropdown a:hover {
    background-color: #7d5eff;
+
+}
+
+.dropdown a.active {
+   background-color: #7d5eff;
+
 }
 
 /* Hamburger icon */
 .menu-button {
    display: none;
    background-color: transparent;
-   color: #ffffff;
+   color:var(--text-color);
    border: none;
    font-size: 1.5rem;
    cursor: pointer;
@@ -207,6 +217,7 @@ header img {
 @media (max-width: 815px) {
    .header-left .header-links a {
       padding: 0.25rem 0.5rem;
+   
    }
 }
 
@@ -240,7 +251,7 @@ header img {
    .menu-button {
       display: block;
       background-color: transparent;
-      color: #ffffff;
+      color: var(--text-color);
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
@@ -295,7 +306,7 @@ header img {
    .menu-button {
       display: block;
       background-color: transparent;
-      color: #ffffff;
+      color: var(--text-color);
       border: none;
       font-size: 1.5rem;
       cursor: pointer;
@@ -338,4 +349,327 @@ header img {
    .menu-button {
       display: none;
    }
+}
+
+
+
+
+.apcontainer {
+   width: 100%;
+   max-width: 400px;
+   background-color: var(--bg-color);
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   display: block;
+}
+
+.apheader {
+   margin-bottom: 20px;
+   text-align: center;
+}
+
+.apheader h1 {
+   font-size: 18px;
+   font-weight: normal;
+}
+
+.apform-group {
+   margin-bottom: 15px;
+   display: flex;
+   align-items: center;
+}
+
+.apform-group i {
+   color: gray;
+   font-size: 16px;
+   margin-right: 10px;
+}
+
+.apform-group input,
+.apform-group textarea {
+   width: 100%;
+   padding: 10px;
+   font-size: 14px;
+   border: none;
+   border-radius: 4px;
+   background-color:var(--text-color);
+   color:var(--bg-color);
+   box-sizing: border-box;
+}
+
+#note {
+   margin-left: 1.25rem;
+}
+
+.apform-group input:focus,
+.apform-group textarea:focus {
+   outline: 2px solid #81A1C1;
+}
+
+.apform-group textarea {
+   resize: none;
+   height: 100px;
+}
+
+.input-with-button {
+   display: flex;
+   align-items: center;
+   position: relative;
+   width: 100%;
+}
+
+.input-with-button input {
+   width: 100%;
+   padding-right: 50px;
+}
+
+.input-with-button button {
+   position: absolute;
+   right: 10px;
+   background-color: #4F46E5;
+   color: white;
+   border: none;
+   padding: 8px 12px;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.buttons {
+   display: flex;
+   justify-content: space-between;
+   margin-top: 15px;
+}
+
+.buttons button {
+   padding: 10px 15px;
+   font-size: 14px;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+.buttons .add {
+   background-color: #4F46E5;
+   color: #ECEFF4;
+}
+
+.buttons .cancel {
+   background-color: #21262D;
+   color: #ECEFF4;
+}
+
+.buttons .add:hover {
+   background-color: #4d47cb;
+}
+
+.buttons .cancel:hover {
+   background-color: #2f322c;
+}
+
+.password-generator {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   width: 100%;
+}
+
+.password-output {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background:var(--bg-color);
+   padding: 10px;
+   border-radius: 5px;
+   position: relative;
+}
+
+.password-output input {
+   border: none;
+   background: transparent;
+   color:var(--text-color);
+   font-size: 1rem;
+   flex: 1;
+   outline: none;
+   padding-left: 30px;
+}
+
+.password-output .toggle-visibility {
+   cursor: pointer;
+   color: gray;
+}
+
+.password-output .key-icon {
+   position: absolute;
+   left: 10px;
+   font-size: 1.2rem;
+   color: gray;
+}
+
+.controls {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.switch {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.switch label {
+   font-size: 0.9rem;
+}
+
+.switch input[type="checkbox"] {
+   width: 40px;
+   height: 20px;
+   border-radius: 50px;
+   position: relative;
+   appearance: none;
+   background-color: #ccc;
+   transition: 0.3s;
+}
+
+.switch input[type="checkbox"]:checked {
+   background-color: #4F46E5;
+}
+
+.switch input[type="checkbox"]:before {
+   content: '';
+   width: 18px;
+   height: 18px;
+   border-radius: 50%;
+   background-color: white;
+   position: absolute;
+   top: 1px;
+   left: 1px;
+   transition: 0.3s;
+}
+
+.switch input[type="checkbox"]:checked:before {
+   left: 21px;
+}
+
+.buttons {
+   display: flex;
+   gap: 10px;
+   justify-content: space-between;
+}
+
+#cancel {
+   background: #21262D;
+   color: gray;
+}
+
+#cancel:hover {
+   cursor: pointer;
+   background-color: #2f353d;
+}
+
+.buttons button {
+   flex: 1;
+   background: #4F46E5;
+   color: white;
+   padding: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   text-align: center;
+   transition: background 0.3s;
+}
+
+.buttons button:hover {
+   background: #4d44e7;
+   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+   .apcontainer {
+      padding: 15px;
+   }
+}
+
+
+
+
+
+
+/* Todo List container */
+#todo-list-section {
+   padding: 2rem;
+
+}
+
+#todo-list h2 {
+   text-align: center;
+   font-size: 2rem;
+   margin-bottom: 1rem;
+}
+
+.todo-item {
+   display: flex;
+   justify-content: space-between;
+   background-color:var(--settings-card-color);
+   padding: 1rem;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   margin-bottom: 1rem;
+}
+
+.todo-item .todo-left {
+   flex: 1;
+   display: flex;
+   flex-direction: column;
+   gap: 0.5rem;
+}
+
+.todo-item .todo-left span {
+   font-size: 1rem;
+   color: var(--text-color);
+}
+
+.todo-item .todo-right {
+   display: flex;
+   align-items: center;
+   gap: 1rem;
+}
+
+.todo-item .todo-right i {
+   cursor: pointer;
+   font-size: 1.2rem;
+   color: #7d5eff;
+   transition: color 0.3s;
+}
+
+.todo-item .todo-right i:hover {
+   color: #6247e5;
+}
+
+
+
+
+
+.toast {
+   visibility: hidden;
+   min-width: 250px;
+   margin-left: -125px;
+   background-color: #4CAF50;
+   color: white;
+   text-align: center;
+   border-radius: 2px;
+   padding: 16px;
+   position: fixed;
+   z-index: 1;
+   left: 50%;
+   bottom: 30px;
+   font-size: 17px;
+   opacity: 0;
+   transition: opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+   visibility: visible;
+   opacity: 1;
 }

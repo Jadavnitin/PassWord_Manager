@@ -6,12 +6,115 @@
    <title>Server Page</title>
    <link rel="stylesheet" href="css/home.css">
    <script src="js/navbar.js" defer></script>
+   <link rel="stylesheet" href="css/servers.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
    <div id="navbar">
 
    </div>
-   <h1>Server Page</h1>
+   <!-- Section 1 -->
+   <div class="section" style="background-color: #2e2e40;">
+      <h1>Host your own</h1>
+      <p>While we welcome anyone to our free instances, we actively encourage self-hosting of <a href="#"
+            style="color: #00aaff; text-decoration: none;">Passky Server</a>.</p>
+   </div>
+   
+   <!-- Section 2 -->
+   <div class="table-section">
+      <h1>Public Servers</h1>
+      <div class="table-wrapper">
+         <table>
+            <thead>
+               <tr>
+                  <th>Name</th>
+                  <th>Accounts</th>
+                  <th>Passwords</th>
+                  <th>Version</th>
+                  <th>Latency</th>
+                  <th>Status</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <div class="europes-td"><img src="images/europe-253311_1920.jpg" alt="EU Flag">
+                        <div>
+                           <div>Europes</div>
+                           <div>https://eu.passky.org</div>
+                        </div>
+                     </div>
+                  </td>
+                  <td>4128</td>
+                  <td>19549 (100)</td>
+                  <td>8.1.8</td>
+                  <td class="latency-high">2053 ms</td>
+                  <td class="status-online">Online</td>
+               </tr>
+               <tr>
+                  <td>
+                     <div class="us-td"><img src="images/usa-1960922.jpg" alt="US Flag">
+                        <div>
+                           <div>America</div>
+                           <div>https://us.passky.org</div>
+                        </div>
+                     </div>
+                  </td>
+                  <td>1014</td>
+                  <td>7127 (100)</td>
+                  <td>8.1.8</td>
+                  <td class="latency-low">2000 ms</td>
+                  <td class="status-online">Online</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
+   
+   <!-- Section 3 -->
+   <div class="server-stats-container">
+      <h1>Server Stats</h1>
+      <div class="server-stats-card-search-bar">
+         <input type="text" placeholder="Search...">
+         <button>Search</button>
+      </div>
+      <section class="server-stats-section">
+         <div class="server-stats-card">
+            <i class="fas fa-microchip icon"></i>
+            <p>CPU Usage</p>
+            <p>0%</p>
+         </div>
+   
+         <div class="server-stats-card">
+            <i class="fas fa-memory icon"></i>
+            <p>RAM Usage</p>
+            <p>0%</p>
+         </div>
+   
+         <div class="server-stats-card">
+            <i class="fas fa-hdd icon"></i>
+            <p>Storage Usage</p>
+            <p>0%</p>
+         </div>
+   
+         <div class="server-stats-card">
+            <i class="fas fa-users icon"></i>
+            <p>Accounts</p>
+            <p>0</p>
+         </div>
+   
+         <div class="server-stats-card">
+            <i class="fas fa-lock icon"></i>
+            <p>Passwords</p>
+            <p>0 (0)</p>
+         </div>
+         <div class="server-stats-card">
+            <i class="fas fa-bell icon"></i>
+            <p>Server version</p>
+            <p class="server-version">0.0.0</p>
+         </div>
+      </section>
+   </div>
    <div id="footer">
    </div>
 </body>
